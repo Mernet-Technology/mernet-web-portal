@@ -1,9 +1,8 @@
 import { Outfit } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
-import SoftBackdrop from "@/components/SoftBackdrop";
-import LenisScroll from "@/components/lenis";
+import Footer from "./components/layout/Footer";
+import Navbar from "./components/layout/Navbar";
+import { ThemeProvider } from "./components/ThemeProvider";
 import { Metadata } from "next";
 
 const outfit = Outfit({
@@ -13,39 +12,39 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
     title: {
-        default: "Pixel.io – Digital Agency Template | PrebuiltUI",
-        template: "%s | Pixel.io",
+        default: "Mernet – Digital Agency | Software & ICT Solutions",
+        template: "%s | Mernet",
     },
     description:
-        "Pixel.io is a modern digital agency template by PrebuiltUI, built for startups and growing businesses. Includes discovery, UI/UX design, development, pricing plans, FAQs, and conversion-focused sections.",
+        "Mernet is a modern digital agency delivering tailored software and intelligent ICT solutions. We help startups and businesses grow through thoughtful design, scalable development, and performance-driven strategy.",
     keywords: [
-        "Pixel.io",
-        "PrebuiltUI",
-        "digital agency template",
-        "Next.js agency website",
-        "UI UX agency",
-        "startup website template",
-        "web development services",
-        "design and development agency",
+        "Mernet",
+        "digital agency",
+        "software development",
+        "ICT solutions",
+        "web development",
+        "UI UX design",
+        "startup website",
+        "business solutions",
     ],
-    authors: [{ name: "PrebuiltUI" }],
-    creator: "PrebuiltUI",
-    publisher: "PrebuiltUI",
+    authors: [{ name: "Mernet" }],
+    creator: "Mernet",
+    publisher: "Mernet",
 
     openGraph: {
-        title: "Pixel.io – Digital Agency Template by PrebuiltUI",
+        title: "Mernet – Digital Agency | Software & ICT Solutions",
         description:
-            "Launch faster with Pixel.io, a modern digital agency template featuring strategy, design, development, pricing plans, and FAQs.",
-        siteName: "PrebuiltUI",
+            "Transform your business with tailored software and intelligent ICT solutions. Strategy, design, development, and growth support.",
+        siteName: "Mernet",
         type: "website",
     },
 
     twitter: {
         card: "summary_large_image",
-        title: "Pixel.io – Digital Agency Template",
+        title: "Mernet – Digital Agency",
         description:
-            "A conversion-focused digital agency template built with Next.js. Perfect for startups, teams, and scalable brands.",
-        creator: "@prebuiltui",
+            "A full-service digital agency helping businesses grow through design, development, and strategy.",
+        creator: "@mernet",
     },
 
     robots: {
@@ -54,19 +53,35 @@ export const metadata: Metadata = {
     },
 };
 
+function SoftBackdrop() {
+    return (
+        <div className="fixed inset-0 -z-10 pointer-events-none transition-colors duration-300">
+            <div 
+                className="absolute left-1/2 top-20 -translate-x-1/2 w-[980px] h-[460px] rounded-full blur-3xl"
+                style={{ background: 'var(--backdrop-1)' }}
+            />
+            <div 
+                className="absolute right-12 bottom-10 w-[420px] h-[220px] rounded-full blur-2xl"
+                style={{ background: 'var(--backdrop-2)' }}
+            />
+        </div>
+    );
+}
+
 export default function RootLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
-            <body>
-                <SoftBackdrop />
-                <LenisScroll />
-                <Navbar />
-                {children}
-                <Footer />
+        <html lang="en" className="light" suppressHydrationWarning>
+            <body className={outfit.variable}>
+                <ThemeProvider>
+                    <SoftBackdrop />
+                    <Navbar />
+                    {children}
+                    <Footer />
+                </ThemeProvider>
             </body>
         </html>
     );
