@@ -8,7 +8,7 @@
 
 1. Clone Repository
 ```
-git clone https://github.com/themewagon/pixel.io-nextjs.git
+git clone https://github.com/Mernet-Technology/mernet-web-portal
 ```
 2. Install Dependencies
 ```
