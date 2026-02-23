@@ -4,9 +4,6 @@
 
  - [Demo](https://themewagon.github.io/pixel.io-nextjs/)
 
-#### Download
- - [Download from ThemeWagon](https://themewagon.com/themes/pixel.io-nextjs/)
-
 ## Getting Started
 
 1. Clone Repository
