@@ -16,7 +16,7 @@ export default function SectionTitle({ title, heading, description }: SectionTit
                     whileInView={{ y: 0, opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1 }}
-                    className="text-sm font-medium text-violet-500 uppercase tracking-wide mb-3"
+                    className="text-sm font-medium text-blue-500 uppercase tracking-wide mb-3"
                 >
                     {title}
                 </motion.p>

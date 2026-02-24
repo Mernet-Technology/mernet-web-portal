@@ -56,7 +56,7 @@ export default function ContactPage() {
                                             border: '1px solid var(--border-color)'
                                         }}
                                     >
-                                        <div className="w-10 h-10 rounded-lg bg-violet-500/10 flex items-center justify-center text-violet-500">
+                                        <div className="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-500">
                                             {info.icon}
                                         </div>
                                         <div>
@@ -67,7 +67,7 @@ export default function ContactPage() {
                                 ))}
                             </div>
 
-                            <div className="p-6 rounded-2xl bg-violet-500/5 border border-violet-500/20">
+                            <div className="p-6 rounded-2xl bg-blue-500/5 border border-blue-500/20">
                                 <h4 className="font-semibold mb-2" style={{ color: 'var(--text-primary)' }}>Office Hours</h4>
                                 <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>
                                     Monday - Friday: 9:00 AM - 6:00 PM (PST)<br />
@@ -88,7 +88,7 @@ export default function ContactPage() {
                                         <label className="block text-sm font-medium mb-2" style={{ color: 'var(--text-primary)' }}>First Name</label>
                                         <input
                                             type="text"
-                                            className="w-full px-4 py-3 rounded-xl focus:border-violet-500 focus:outline-none transition-colors"
+                                            className="w-full px-4 py-3 rounded-xl focus:border-blue-500 focus:outline-none transition-colors"
                                             style={{ 
                                                 backgroundColor: 'var(--bg-card)',
                                                 border: '1px solid var(--border-color)',
@@ -101,7 +101,7 @@ export default function ContactPage() {
                                         <label className="block text-sm font-medium mb-2" style={{ color: 'var(--text-primary)' }}>Last Name</label>
                                         <input
                                             type="text"
-                                            className="w-full px-4 py-3 rounded-xl focus:border-violet-500 focus:outline-none transition-colors"
+                                            className="w-full px-4 py-3 rounded-xl focus:border-blue-500 focus:outline-none transition-colors"
                                             style={{ 
                                                 backgroundColor: 'var(--bg-card)',
                                                 border: '1px solid var(--border-color)',
@@ -116,7 +116,7 @@ export default function ContactPage() {
                                     <label className="block text-sm font-medium mb-2" style={{ color: 'var(--text-primary)' }}>Email</label>
                                     <input
                                         type="email"
-                                        className="w-full px-4 py-3 rounded-xl focus:border-violet-500 focus:outline-none transition-colors"
+                                        className="w-full px-4 py-3 rounded-xl focus:border-blue-500 focus:outline-none transition-colors"
                                         style={{ 
                                             backgroundColor: 'var(--bg-card)',
                                             border: '1px solid var(--border-color)',
@@ -130,7 +130,7 @@ export default function ContactPage() {
                                     <label className="block text-sm font-medium mb-2" style={{ color: 'var(--text-primary)' }}>Subject</label>
                                     <input
                                         type="text"
-                                        className="w-full px-4 py-3 rounded-xl focus:border-violet-500 focus:outline-none transition-colors"
+                                        className="w-full px-4 py-3 rounded-xl focus:border-blue-500 focus:outline-none transition-colors"
                                         style={{ 
                                             backgroundColor: 'var(--bg-card)',
                                             border: '1px solid var(--border-color)',

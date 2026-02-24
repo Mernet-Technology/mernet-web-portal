@@ -73,7 +73,7 @@ export default function FeaturedProjects() {
                                 />
                             </div>
                             <div className="p-6">
-                                <span className="text-xs text-violet-500 uppercase tracking-wide">
+                                <span className="text-xs text-blue-500 uppercase tracking-wide">
                                     {project.category}
                                 </span>
                                 <h3 className="text-lg font-semibold mt-2 mb-2" style={{ color: 'var(--text-primary)' }}>

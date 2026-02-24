@@ -85,7 +85,7 @@ export default function WhyChooseUs() {
                                 }
                             }}
                             className={`relative p-6 rounded-xl backdrop-blur ${plan.popular
-                                ? 'border-2 border-indigo-500 bg-indigo-500/5'
+                                ? 'border-2 border-blue-500 bg-blue-500/5'
                                 : ''
                                 }`}
                             style={!plan.popular ? { 
@@ -94,7 +94,7 @@ export default function WhyChooseUs() {
                             } : undefined}
                         >
                             {plan.popular && (
-                                <p className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-indigo-500 text-white rounded-md text-xs">
+                                <p className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-blue-500 text-white rounded-md text-xs">
                                     Most popular
                                 </p>
                             )}
@@ -119,7 +119,7 @@ export default function WhyChooseUs() {
                                         className="flex items-center gap-3 text-sm"
                                         style={{ color: 'var(--text-secondary)' }}
                                     >
-                                        <Check className="w-4 h-4 text-indigo-500" />
+                                        <Check className="w-4 h-4 text-blue-500" />
                                         {feat}
                                     </li>
                                 ))}

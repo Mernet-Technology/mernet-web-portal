@@ -68,7 +68,7 @@ export default function ServicesPage() {
                                     border: '1px solid var(--border-color)'
                                 }}
                             >
-                                <div className="w-14 h-14 rounded-xl bg-violet-500/10 flex items-center justify-center mb-5 text-violet-500">
+                                <div className="w-14 h-14 rounded-xl bg-blue-500/10 flex items-center justify-center mb-5 text-blue-500">
                                     {service.icon}
                                 </div>
                                 <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--text-primary)' }}>{service.title}</h3>
@@ -78,7 +78,7 @@ export default function ServicesPage() {
                                 <ul className="space-y-2">
                                     {service.features.map((feature, j) => (
                                         <li key={j} className="text-sm flex items-center gap-2" style={{ color: 'var(--text-muted)' }}>
-                                            <span className="w-1.5 h-1.5 rounded-full bg-violet-500" />
+                                            <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
                                             {feature}
                                         </li>
                                     ))}

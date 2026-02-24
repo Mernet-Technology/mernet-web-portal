@@ -98,7 +98,7 @@ export default function AboutPage() {
                                     border: '1px solid var(--border-color)'
                                 }}
                             >
-                                <div className="w-12 h-12 rounded-lg bg-violet-500/10 flex items-center justify-center mb-4 text-violet-500">
+                                <div className="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center mb-4 text-blue-500">
                                     {value.icon}
                                 </div>
                                 <h3 className="text-lg font-semibold mb-2" style={{ color: 'var(--text-primary)' }}>{value.title}</h3>

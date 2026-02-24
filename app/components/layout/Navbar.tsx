@@ -2,11 +2,13 @@
 import { MenuIcon, XIcon, Sun, Moon } from 'lucide-react';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { usePathname } from 'next/navigation';
 import { useTheme } from '../ThemeProvider';
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const { theme, toggleTheme } = useTheme();
+    const pathname = usePathname();
 
     const navLinks = [
         { name: 'Home', href: '/' },
@@ -15,6 +17,13 @@ export default function Navbar() {
         { name: 'Projects', href: '/projects' },
         { name: 'Contact', href: '/contact' },
     ];
+
+    const isActive = (href: string) => {
+        if (href === '/') {
+            return pathname === '/';
+        }
+        return pathname.startsWith(href);
+    };
 
     return (
         <motion.nav className='fixed top-5 left-0 right-0 z-50 px-4'
@@ -40,15 +49,29 @@ export default function Navbar() {
                     />
                 </a>
 
-                <div className='hidden md:flex items-center gap-8 text-sm font-medium' style={{ color: 'var(--text-secondary)' }}>
+                <div className='hidden md:flex items-center gap-1 text-sm font-medium'>
                     {navLinks.map((link) => (
                         <a 
                             href={link.href} 
                             key={link.name} 
-                            className="hover:opacity-80 transition"
-                            style={{ color: 'var(--text-primary)' }}
+                            className={`relative px-4 py-2 rounded-full transition-all duration-300 ${
+                                isActive(link.href) 
+                                    ? 'text-blue-600 dark:text-blue-400' 
+                                    : 'hover:opacity-80'
+                            }`}
+                            style={{ 
+                                color: isActive(link.href) ? undefined : 'var(--text-primary)',
+                                backgroundColor: isActive(link.href) ? 'var(--accent-bg)' : 'transparent'
+                            }}
                         >
                             {link.name}
+                            {isActive(link.href) && (
+                                <motion.span
+                                    layoutId="navbar-indicator"
+                                    className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-blue-500"
+                                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                                />
+                            )}
                         </a>
                     ))}
                 </div>
@@ -77,7 +100,7 @@ export default function Navbar() {
             </div>
 
             <div 
-                className={`flex flex-col items-center justify-center gap-6 text-lg font-medium fixed inset-0 backdrop-blur-md z-50 transition-all duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"}`}
+                className={`flex flex-col items-center justify-center gap-4 text-lg font-medium fixed inset-0 backdrop-blur-md z-50 transition-all duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"}`}
                 style={{ backgroundColor: 'var(--navbar-bg)' }}
             >
                 {navLinks.map((link) => (
@@ -85,7 +108,16 @@ export default function Navbar() {
                         key={link.name} 
                         href={link.href} 
                         onClick={() => setIsOpen(false)}
-                        style={{ color: 'var(--text-primary)' }}
+                        className={`px-6 py-2 rounded-full transition-all duration-300 ${
+                            isActive(link.href) 
+                                ? 'text-blue-600 dark:text-blue-400 font-semibold' 
+                                : ''
+                        }`}
+                        style={{ 
+                            color: isActive(link.href) ? undefined : 'var(--text-primary)',
+                            backgroundColor: isActive(link.href) ? 'var(--accent-bg)' : 'transparent',
+                            border: isActive(link.href) ? '1px solid var(--border-color)' : 'none'
+                        }}
                     >
                         {link.name}
                     </a>
@@ -93,7 +125,7 @@ export default function Navbar() {
 
                 <button
                     onClick={toggleTheme}
-                    className='p-3 rounded-full transition-all duration-300'
+                    className='p-3 rounded-full transition-all duration-300 mt-4'
                     style={{ 
                         backgroundColor: 'var(--accent-bg)',
                         border: '1px solid var(--border-color)'
@@ -109,7 +141,7 @@ export default function Navbar() {
 
                 <button
                     onClick={() => setIsOpen(false)}
-                    className="rounded-md p-2 ring-gray-300 active:ring-2 transition-colors"
+                    className="rounded-md p-2 ring-gray-300 active:ring-2 transition-colors mt-2"
                     style={{ 
                         backgroundColor: 'var(--accent-bg)',
                         color: 'var(--text-primary)'

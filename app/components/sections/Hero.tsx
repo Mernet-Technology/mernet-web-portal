@@ -68,7 +68,7 @@ export default function Hero() {
                                 transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1, delay: 0.1 }}
                             >
                                 Transforming Businesses through  <br />
-                                <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-violet-500">
+                                <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-700">
                                     Tailored Software & Intelligent ICT Solutions
                                 </span>
                             </motion.h1>
@@ -113,7 +113,7 @@ export default function Hero() {
                                 transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1, delay: 0.1 }}
                             >
                                 <div className="flex items-center gap-2 p-2 px-3 sm:px-6.5 hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
-                                    <ZapIcon className="size-4 text-indigo-500" />
+                                    <ZapIcon className="size-4 text-blue-500" />
                                     <div>
                                         <div style={{ color: 'var(--text-primary)' }}>Strategy-led execution</div>
                                         <div className="text-xs" style={{ color: 'var(--text-muted)' }}>
@@ -125,7 +125,7 @@ export default function Hero() {
                                 <div className="hidden sm:block h-6 w-px" style={{ backgroundColor: 'var(--border-color)' }} />
 
                                 <div className="flex items-center gap-2 p-2 px-3 sm:px-6.5 hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
-                                    <CheckIcon className="size-4 text-emerald-500" />
+                                    <CheckIcon className="size-4 text-blue-400" />
                                     <div>
                                         <div style={{ color: 'var(--text-primary)' }}>Full-service delivery</div>
                                         <div className="text-xs" style={{ color: 'var(--text-muted)' }}>
