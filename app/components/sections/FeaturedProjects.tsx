@@ -9,7 +9,7 @@ const projectsData = [
     {
         title: 'Inventory Management System',
         category: 'Business System',
-        image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=800',
+        image: '/images/services-inventory-management.png',
         description: 'A centralized system for managing stock, suppliers, and sales with real-time reporting.'
     },
     {
