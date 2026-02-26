@@ -8,19 +8,25 @@ const contactInfo = [
     {
         icon: <Mail className="w-5 h-5" />,
         title: 'Email',
-        value: 'hello@agency.com',
-        link: 'mailto:hello@agency.com'
+        value: 'mernettechnology@gmail.com',
+        link: 'mailto:mernettechnology@gmail.com'
     },
     {
         icon: <Phone className="w-5 h-5" />,
         title: 'Phone',
-        value: '+1 (555) 123-4567',
-        link: 'tel:+15551234567'
+        value: '+255 767 956 613',
+        link: 'tel:+255767956613'
+    },
+    {
+        icon: <Phone className="w-5 h-5" />,
+        title: 'Phone',
+        value: '+255 743 463 710',
+        link: 'tel:+255743463710'
     },
     {
         icon: <MapPin className="w-5 h-5" />,
         title: 'Location',
-        value: 'San Francisco, CA',
+        value: ' Dar-es-Salaam, Tanzania',
         link: '#'
     }
 ];
@@ -32,8 +38,8 @@ export default function ContactPage() {
                 <div className="max-w-6xl mx-auto px-4">
                     <SectionTitle
                         title="Contact Us"
-                        heading="Let's start a conversation"
-                        description="Have a project in mind? We'd love to hear from you. Send us a message and we'll respond as soon as possible."
+                        heading="Let's Start a Conversation"
+                        description="Have a project in mind? Reach out and let's discuss how we can build the right solution for your business."
                     />
 
                     <div className="grid md:grid-cols-2 gap-12 mt-16">
@@ -70,8 +76,7 @@ export default function ContactPage() {
                             <div className="p-6 rounded-2xl bg-blue-500/5 border border-blue-500/20">
                                 <h4 className="font-semibold mb-2" style={{ color: 'var(--text-primary)' }}>Office Hours</h4>
                                 <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>
-                                    Monday - Friday: 9:00 AM - 6:00 PM (PST)<br />
-                                    Saturday - Sunday: Closed
+                                    Monday – Friday: 8:00 AM – 5:00 PM (EAT)
                                 </p>
                             </div>
                         </motion.div>
@@ -144,7 +149,7 @@ export default function ContactPage() {
                                     <label className="block text-sm font-medium mb-2" style={{ color: 'var(--text-primary)' }}>Message</label>
                                     <textarea
                                         rows={5}
-                                        className="w-full px-4 py-3 rounded-xl focus:border-violet-500 focus:outline-none transition-colors resize-none"
+                                        className="w-full px-4 py-3 rounded-xl focus:border-blue-500 focus:outline-none transition-colors resize-none"
                                         style={{ 
                                             backgroundColor: 'var(--bg-card)',
                                             border: '1px solid var(--border-color)',

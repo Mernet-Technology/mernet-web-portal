@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import { useTheme } from '../ThemeProvider';
+import { Instagram } from 'lucide-react';
 
 const footerLinks = [
     {
@@ -23,9 +24,7 @@ const footerLinks = [
     {
         title: "Connect",
         links: [
-            { name: "Twitter", url: "#" },
-            { name: "LinkedIn", url: "#" },
-            { name: "GitHub", url: "#" }
+            { name: "Instagram", url: "https://www.instagram.com/mernettechnologies_/" }
         ]
     }
 ];
@@ -59,7 +58,7 @@ export default function Footer() {
                             style={{ filter: theme === 'dark' ? 'brightness(0) invert(1)' : 'none' }}
                         />
                         <p className="max-w-[410px] mt-6 text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-                            We are a digital agency focused on strategy, design and development—helping brands build meaningful digital experiences and grow sustainably.
+                            We are a software development and ICT solutions company building secure, scalable systems that help businesses operate efficiently and grow sustainably.
                         </p>
                     </div>
 
@@ -75,10 +74,17 @@ export default function Footer() {
                                             <li key={i}>
                                                 <a
                                                     href={link.url}
-                                                    className="hover:opacity-80 transition"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="inline-flex items-center gap-2 hover:opacity-80 transition"
                                                     style={{ color: 'var(--text-secondary)' }}
+                                                    aria-label={link.name}
                                                 >
-                                                    {link.name}
+                                                    {section.title === "Connect" ? (
+                                                        <Instagram className="w-5 h-5" />
+                                                    ) : (
+                                                        link.name
+                                                    )}
                                                 </a>
                                             </li>
                                         )

@@ -18,7 +18,7 @@ export default function CTA() {
                             viewport={{ once: true }}
                             transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1 }}
                         >
-                            Ready to grow your brand?
+                            Ready to Build Your Next System?
                         </motion.h2>
                         <motion.p 
                             className="max-sm:text-sm mb-10 max-w-xl mx-auto"
@@ -28,7 +28,7 @@ export default function CTA() {
                             viewport={{ once: true }}
                             transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1, delay: 0.2 }}
                         >
-                            Partner with our agency to design, build and scale digital products that deliver real business results.
+                            Partner with Mernet Technologies to design and implement reliable software solutions tailored to your business.
                         </motion.p>
                         <motion.div
                             initial={{ y: 60, opacity: 0 }}
@@ -38,7 +38,7 @@ export default function CTA() {
                         >
                             <a href="/contact">
                                 <GhostButton className="px-8 py-3 gap-2">
-                                    Start your project <ArrowRightIcon size={20} />
+                                    Start Your Project <ArrowRightIcon size={20} />
                                 </GhostButton>
                             </a>
                         </motion.div>

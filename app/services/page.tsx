@@ -2,44 +2,44 @@
 import { motion } from 'framer-motion';
 import SectionTitle from '../components/ui/SectionTitle';
 import { GhostButton } from '../components/ui/Button';
-import { ArrowRightIcon, Code, Palette, Megaphone, LineChart, Smartphone, Globe } from 'lucide-react';
+import { ArrowRightIcon, Code, Database, Globe, Server, Wrench, GraduationCap } from 'lucide-react';
 
 const services = [
     {
-        icon: <Palette className="w-8 h-8" />,
-        title: 'UI/UX Design',
-        description: 'Create stunning, user-centered designs that engage your audience and drive conversions.',
-        features: ['User Research', 'Wireframing', 'Prototyping', 'Visual Design']
-    },
-    {
         icon: <Code className="w-8 h-8" />,
-        title: 'Web Development',
-        description: 'Build fast, scalable, and secure web applications using modern technologies.',
-        features: ['Frontend Development', 'Backend Systems', 'API Integration', 'Performance Optimization']
+        title: 'Custom Software Development',
+        description: 'Design and development of tailored business systems and enterprise applications.',
+        features: ['Business Systems', 'Enterprise Applications', 'Web Portals', 'API Development & Integration']
     },
     {
-        icon: <Smartphone className="w-8 h-8" />,
-        title: 'Mobile Apps',
-        description: 'Develop cross-platform mobile applications that deliver seamless experiences.',
-        features: ['iOS & Android', 'React Native', 'Flutter', 'App Store Optimization']
+        icon: <Database className="w-8 h-8" />,
+        title: 'Business Management Systems',
+        description: 'Industry-specific systems that automate and optimize operations.',
+        features: ['Inventory Management Systems', 'Church Management Systems', 'Restaurant Management Systems', 'Custom Industry Solutions']
     },
     {
         icon: <Globe className="w-8 h-8" />,
-        title: 'Branding',
-        description: 'Craft memorable brand identities that resonate with your target audience.',
-        features: ['Logo Design', 'Brand Guidelines', 'Visual Identity', 'Brand Strategy']
+        title: 'Web Application Development',
+        description: 'Secure and scalable web platforms for businesses and institutions.',
+        features: ['Corporate Websites', 'E-commerce Platforms', 'Secure Web Applications']
     },
     {
-        icon: <Megaphone className="w-8 h-8" />,
-        title: 'Digital Marketing',
-        description: 'Drive growth through data-driven marketing strategies and campaigns.',
-        features: ['SEO', 'Content Marketing', 'Social Media', 'PPC Advertising']
+        icon: <Server className="w-8 h-8" />,
+        title: 'ICT Infrastructure & Integration',
+        description: 'Reliable ICT solutions supporting digital transformation.',
+        features: ['Network Setup', 'Server Configuration', 'System Integration']
     },
     {
-        icon: <LineChart className="w-8 h-8" />,
-        title: 'Analytics & Strategy',
-        description: 'Make informed decisions with comprehensive analytics and strategic planning.',
-        features: ['Data Analysis', 'Market Research', 'Growth Strategy', 'KPI Tracking']
+        icon: <Wrench className="w-8 h-8" />,
+        title: 'System Maintenance & Support',
+        description: 'Continuous system optimization and technical support.',
+        features: ['Updates & Optimization', 'Security Enhancements', 'Technical Support']
+    },
+    {
+        icon: <GraduationCap className="w-8 h-8" />,
+        title: 'ICT Consultancy and Training',
+        description: 'Expert guidance and capacity building to help your team adopt and leverage technology effectively.',
+        features: ['ICT Strategy & Planning', 'Technology Assessment', 'Staff Training & Workshops', 'Change Management']
     }
 ];
 
@@ -50,8 +50,8 @@ export default function ServicesPage() {
                 <div className="max-w-6xl mx-auto px-4">
                     <SectionTitle
                         title="Our Services"
-                        heading="Everything you need to succeed online"
-                        description="Comprehensive digital solutions tailored to your business goals and growth objectives."
+                        heading="Comprehensive Software & ICT Solutions"
+                        description="We deliver structured, scalable, and secure technology solutions tailored to business growth."
                     />
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
@@ -97,7 +97,7 @@ export default function ServicesPage() {
                         <p className="mb-6" style={{ color: 'var(--text-secondary)' }}>Ready to start your project?</p>
                         <a href="/contact">
                             <GhostButton className="px-8 py-3">
-                                Get in touch <ArrowRightIcon size={18} />
+                                Get in Touch <ArrowRightIcon size={18} />
                             </GhostButton>
                         </a>
                     </motion.div>

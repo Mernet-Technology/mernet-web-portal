@@ -7,22 +7,22 @@ import { motion } from 'framer-motion';
 
 const projectsData = [
     {
-        title: 'E-Commerce Platform',
-        category: 'Web Development',
+        title: 'Inventory Management System',
+        category: 'Business System',
         image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=800',
-        description: 'A modern e-commerce solution with seamless checkout experience.'
+        description: 'A centralized system for managing stock, suppliers, and sales with real-time reporting.'
     },
     {
-        title: 'Brand Identity',
-        category: 'Branding',
+        title: 'Church Management System',
+        category: 'Web Application',
         image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=800',
-        description: 'Complete brand overhaul for a tech startup.'
+        description: 'A digital platform for managing members, contributions, attendance, and financial records.'
     },
     {
-        title: 'Mobile App',
-        category: 'App Development',
+        title: 'Restaurant Management System',
+        category: 'POS & Business System',
         image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=800',
-        description: 'Cross-platform mobile app for fitness tracking.'
+        description: 'A complete restaurant solution with order management, billing, and performance analytics.'
     }
 ];
 
@@ -38,8 +38,8 @@ export default function FeaturedProjects() {
             <div className="max-w-6xl mx-auto px-4">
                 <SectionTitle
                     title="Projects"
-                    heading="Featured work"
-                    description="Explore some of our recent projects that showcase our expertise and creativity."
+                    heading="Featured Systems"
+                    description="Explore some of the business systems we have successfully designed and implemented."
                 />
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -96,7 +96,7 @@ export default function FeaturedProjects() {
                 >
                     <a href="/projects">
                         <GhostButton className="px-8 py-3">
-                            View all projects <ArrowRightIcon size={18} />
+                            View All Projects <ArrowRightIcon size={18} />
                         </GhostButton>
                     </a>
                 </motion.div>

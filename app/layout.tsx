@@ -12,38 +12,37 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
     title: {
-        default: "Mernet – Digital Agency | Software & ICT Solutions",
-        template: "%s | Mernet",
+        default: "Mernet Technologies | Software Development & ICT Solutions",
+        template: "%s | Mernet Technologies",
     },
     description:
-        "Mernet is a modern digital agency delivering tailored software and intelligent ICT solutions. We help startups and businesses grow through thoughtful design, scalable development, and performance-driven strategy.",
+        "Mernet Technologies delivers custom software development and intelligent ICT solutions. We build scalable business systems, web applications, and secure digital infrastructure for growing organizations.",
     keywords: [
-        "Mernet",
-        "digital agency",
-        "software development",
+        "software development Tanzania",
         "ICT solutions",
-        "web development",
-        "UI UX design",
-        "startup website",
-        "business solutions",
+        "business systems",
+        "inventory management system",
+        "church management system",
+        "restaurant management system",
+        "web application development",
     ],
-    authors: [{ name: "Mernet" }],
-    creator: "Mernet",
-    publisher: "Mernet",
+    authors: [{ name: "Mernet Technologies" }],
+    creator: "Mernet Technologies",
+    publisher: "Mernet Technologies",
 
     openGraph: {
-        title: "Mernet – Digital Agency | Software & ICT Solutions",
+        title: "Mernet Technologies | Software Development & ICT Solutions",
         description:
-            "Transform your business with tailored software and intelligent ICT solutions. Strategy, design, development, and growth support.",
-        siteName: "Mernet",
+            "Transform your operations with custom-built business systems and intelligent ICT solutions designed for performance, security, and scalability.",
+        siteName: "Mernet Technologies",
         type: "website",
     },
 
     twitter: {
         card: "summary_large_image",
-        title: "Mernet – Digital Agency",
+        title: "Mernet Technologies | Software & ICT Solutions",
         description:
-            "A full-service digital agency helping businesses grow through design, development, and strategy.",
+            "A software development company delivering secure, scalable business systems and intelligent ICT solutions.",
         creator: "@mernet",
     },
 

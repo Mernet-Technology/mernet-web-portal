@@ -2,28 +2,28 @@
 import { motion } from 'framer-motion';
 import SectionTitle from '../components/ui/SectionTitle';
 import { GhostButton } from '../components/ui/Button';
-import { ArrowRightIcon, Users, Target, Award, Heart } from 'lucide-react';
+import { ArrowRightIcon, Users, Target, Award, Shield } from 'lucide-react';
 
 const values = [
     {
         icon: <Users className="w-6 h-6" />,
         title: 'Client-Focused',
-        description: 'We put our clients at the center of everything we do, ensuring their success is our success.'
+        description: 'We prioritize our clients\' operational needs and long-term success.'
     },
     {
         icon: <Target className="w-6 h-6" />,
-        title: 'Results-Driven',
-        description: 'Every decision we make is guided by measurable outcomes and real business impact.'
+        title: 'Innovation',
+        description: 'We continuously adopt modern technologies to build future-ready systems.'
     },
     {
         icon: <Award className="w-6 h-6" />,
         title: 'Excellence',
-        description: 'We strive for excellence in every project, delivering quality that exceeds expectations.'
+        description: 'We deliver high-quality solutions that exceed expectations.'
     },
     {
-        icon: <Heart className="w-6 h-6" />,
-        title: 'Passion',
-        description: 'We are passionate about technology and design, bringing enthusiasm to every challenge.'
+        icon: <Shield className="w-6 h-6" />,
+        title: 'Integrity',
+        description: 'We operate with professionalism, transparency, and accountability.'
     }
 ];
 
@@ -34,8 +34,8 @@ export default function AboutPage() {
                 <div className="max-w-6xl mx-auto px-4">
                     <SectionTitle
                         title="About Us"
-                        heading="We build digital experiences that matter"
-                        description="A team of designers, developers, and strategists dedicated to helping businesses thrive in the digital age."
+                        heading="We build reliable software systems that power business operations"
+                        description="A team of software engineers and ICT specialists dedicated to delivering secure, scalable, and efficient digital systems."
                     />
 
                     <motion.div
@@ -48,13 +48,10 @@ export default function AboutPage() {
                         <div>
                             <h3 className="text-2xl font-semibold mb-4" style={{ color: 'var(--text-primary)' }}>Our Story</h3>
                             <p className="mb-4" style={{ color: 'var(--text-secondary)' }}>
-                                Founded with a vision to bridge the gap between technology and business success, 
-                                we have grown into a full-service digital agency that partners with startups 
-                                and enterprises alike.
+                                Founded with a vision to bridge the gap between technology and business efficiency, Mernet Technologies has grown into a trusted software development and ICT solutions provider serving businesses and institutions.
                             </p>
                             <p className="mb-6" style={{ color: 'var(--text-secondary)' }}>
-                                Our team brings together diverse expertise in design, development, and strategy 
-                                to deliver solutions that not only look great but also drive real results.
+                                Our team combines technical expertise with industry insight to deliver practical, high-performance systems that solve real operational challenges.
                             </p>
                             <a href="/contact">
                                 <GhostButton className="px-6 py-3">
@@ -64,7 +61,7 @@ export default function AboutPage() {
                         </div>
                         <div className="rounded-2xl overflow-hidden" style={{ border: '1px solid var(--border-color)' }}>
                             <img
-                                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800"
+                                src="/images/ourteam.jpg"
                                 alt="Our team"
                                 className="w-full h-full object-cover"
                             />
@@ -80,8 +77,8 @@ export default function AboutPage() {
                 <div className="max-w-6xl mx-auto px-4">
                     <SectionTitle
                         title="Our Values"
-                        heading="What drives us forward"
-                        description="The principles that guide our work and relationships."
+                        heading="What Drives Our Innovation"
+                        description="The principles guiding our systems, partnerships, and long-term commitment to clients."
                     />
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">

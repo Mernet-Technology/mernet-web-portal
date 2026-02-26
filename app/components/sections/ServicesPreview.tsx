@@ -1,24 +1,24 @@
 'use client';
 import { useRef } from 'react';
-import { UploadIcon, VideoIcon, ZapIcon } from 'lucide-react';
+import { CodeIcon, FileCodeIcon, ServerIcon, UploadIcon, VideoIcon, ZapIcon } from 'lucide-react';
 import SectionTitle from '../ui/SectionTitle';
 import { motion } from 'framer-motion';
 
 const servicesData = [
     {
-        icon: <UploadIcon className="w-6 h-6" />,
-        title: 'Discovery & Planning',
-        desc: 'We understand your goals, audience and challenges to craft a clear, actionable strategy.'
+        icon: <FileCodeIcon className="w-6 h-6" />,
+        title: 'System Analysis & Planning',
+        desc: 'We analyze your workflows and business requirements to design structured, scalable digital solutions.'
     },
     {
-        icon: <ZapIcon className="w-6 h-6" />,
-        title: 'Design & Development',
-        desc: 'High-quality design and scalable development focused on performance and usability.'
+        icon: <CodeIcon className="w-6 h-6" />,
+        title: 'Custom Software Development',
+        desc: 'We build secure, high-performance business systems tailored to your operational needs.'
     },
     {
-        icon: <VideoIcon className="w-6 h-6" />,
-        title: 'Launch & Growth',
-        desc: 'We launch, optimize and continuously improve to drive measurable business growth.'
+        icon: <ServerIcon className="w-6 h-6" />,
+        title: 'Deployment & Ongoing Support',
+        desc: 'We deploy, optimize, and maintain systems to ensure long-term performance and reliability.'
     }
 ];
 
@@ -30,8 +30,8 @@ export default function ServicesPreview() {
             <div className="max-w-6xl mx-auto px-4">
                 <SectionTitle
                     title="Services"
-                    heading="Everything your brand needs to grow"
-                    description="From strategy to execution, we help businesses build strong digital products and meaningful customer experiences."
+                    heading="Everything your business needs to grow digitally"
+                    description="From planning to deployment, we deliver reliable software systems and ICT solutions that improve efficiency and drive measurable results."
                 />
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

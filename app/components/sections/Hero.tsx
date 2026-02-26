@@ -1,29 +1,52 @@
 'use client';
-import { ArrowRightIcon, PlayIcon, ZapIcon, CheckIcon } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { ArrowRightIcon, PlayIcon, ZapIcon, CheckIcon, GalleryHorizontalEnd, ChevronLeft, ChevronRight } from 'lucide-react';
 import { PrimaryButton, GhostButton } from '../ui/Button';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+
+const heroSlides = [
+    { src: '/images/slideshowphoto2.jpeg', alt: 'Software and ICT solutions' },
+    { src: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1600&auto=format&fit=crop', alt: 'Business systems and analytics' },
+    { src: '/images/slideshowphoto1.png', alt: 'Team collaboration' },
+    { src: '/images/ict-consultancy.jpg', alt: 'Digital transformation' },
+];
+
+const SLIDE_INTERVAL_MS = 5000;
 
 export default function Hero() {
+    const [currentSlide, setCurrentSlide] = useState(0);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+        }, SLIDE_INTERVAL_MS);
+        return () => clearInterval(timer);
+    }, []);
+
+    const goToSlide = (index: number) => {
+        setCurrentSlide(index);
+    };
+
+    const goPrev = () => {
+        setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
+    };
+
+    const goNext = () => {
+        setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    };
+
     const trustedUserImages = [
         'https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=50',
         'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=50',
         'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=50&h=50&fit=crop'
     ];
 
-    const mainImageUrl = 'https://images.unsplash.com/photo-1576267423445-b2e0074d68a4?q=80&w=1600&auto=format&fit=crop';
-
-    const galleryStripImages = [
-        'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=100',
-        'https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=100',
-        'https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=100',
-    ];
-
     const trustedLogosText = [
-        'Startups',
-        'Scale-ups',
-        'Founders',
-        'Global teams',
-        'Creative brands'
+        'Custom Software Development',
+        'Web Applications',
+        'ICT Infrastructure Installation',
+        'Website Development',
+        'IT Consultancy & Training'
     ];
 
     return (
@@ -55,7 +78,7 @@ export default function Hero() {
                                     ))}
                                 </div>
                                 <span className="text-xs" style={{ color: 'var(--text-secondary)' }}>
-                                    Trusted by brands & founders worldwide
+                                    Custom Systems • Web Applications • ICT Infrastructure
                                 </span>
                             </motion.a>
 
@@ -67,9 +90,9 @@ export default function Hero() {
                                 viewport={{ once: true }}
                                 transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1, delay: 0.1 }}
                             >
-                                Transforming Businesses through  <br />
+                                Transforming Businesses Through Smart Software & <br />
                                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-700">
-                                    Tailored Software & Intelligent ICT Solutions
+                                    Intelligent ICT Solutions
                                 </span>
                             </motion.h1>
 
@@ -81,8 +104,8 @@ export default function Hero() {
                                 viewport={{ once: true }}
                                 transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1, delay: 0.2 }}
                             >
-                                A creative digital agency helping startups and businesses grow through
-                                thoughtful design, scalable development and performance-driven strategy.
+                               We develop custom business systems, web applications,
+                                and integrated ICT solutions that streamline operations, strengthen security, and drive sustainable growth.
                             </motion.p>
 
                             <motion.div className="flex flex-col sm:flex-row items-center gap-4 mb-8"
@@ -93,14 +116,14 @@ export default function Hero() {
                             >
                                 <a href="/contact" className="w-full sm:w-auto">
                                     <PrimaryButton className="max-sm:w-full py-3 px-7">
-                                        Start your project
+                                        Start Your Project
                                         <ArrowRightIcon className="size-4" />
                                     </PrimaryButton>
                                 </a>
 
                                 <GhostButton className="max-sm:w-full max-sm:justify-center py-3 px-5">
-                                    <PlayIcon className="size-4" />
-                                    View our work
+                                    <GalleryHorizontalEnd className="size-4" />
+                                    View Our Work
                                 </GhostButton>
                             </motion.div>
 
@@ -115,9 +138,9 @@ export default function Hero() {
                                 <div className="flex items-center gap-2 p-2 px-3 sm:px-6.5 hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
                                     <ZapIcon className="size-4 text-blue-500" />
                                     <div>
-                                        <div style={{ color: 'var(--text-primary)' }}>Strategy-led execution</div>
+                                        <div style={{ color: 'var(--text-primary)' }}>Strategy-Driven Development</div>
                                         <div className="text-xs" style={{ color: 'var(--text-muted)' }}>
-                                            Focused on growth & results
+                                            Built around your business goals.
                                         </div>
                                     </div>
                                 </div>
@@ -127,9 +150,9 @@ export default function Hero() {
                                 <div className="flex items-center gap-2 p-2 px-3 sm:px-6.5 hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
                                     <CheckIcon className="size-4 text-blue-400" />
                                     <div>
-                                        <div style={{ color: 'var(--text-primary)' }}>Full-service delivery</div>
+                                        <div style={{ color: 'var(--text-primary)' }}>End-to-End System Delivery</div>
                                         <div className="text-xs" style={{ color: 'var(--text-muted)' }}>
-                                            Design, dev & marketing
+                                            From analysis to deployment and support.
                                         </div>
                                     </div>
                                 </div>
@@ -143,52 +166,92 @@ export default function Hero() {
                             transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1, delay: 0.5 }}
                         >
                             <motion.div 
-                                className="rounded-3xl overflow-hidden shadow-2xl"
+                                className="rounded-3xl overflow-hidden shadow-2xl relative"
                                 style={{ border: '1px solid var(--border-color)' }}
                             >
                                 <div className="relative aspect-[16/10]" style={{ backgroundColor: 'var(--bg-secondary)' }}>
-                                    <img
-                                        src={mainImageUrl}
-                                        alt="agency-work-preview"
-                                        className="w-full h-full object-cover object-center"
-                                    />
+                                    <AnimatePresence mode="wait" initial={false}>
+                                        <motion.div
+                                            key={currentSlide}
+                                            initial={{ opacity: 0 }}
+                                            animate={{ opacity: 1 }}
+                                            exit={{ opacity: 0 }}
+                                            transition={{ duration: 0.5 }}
+                                            className="absolute inset-0"
+                                        >
+                                            <img
+                                                src={heroSlides[currentSlide].src}
+                                                alt={heroSlides[currentSlide].alt}
+                                                className="w-full h-full object-cover object-center"
+                                            />
+                                        </motion.div>
+                                    </AnimatePresence>
 
                                     <div 
-                                        className="absolute left-4 top-4 px-3 py-1 rounded-full backdrop-blur-sm text-xs text-white"
+                                        className="absolute left-4 top-4 px-3 py-1 rounded-full backdrop-blur-sm text-xs text-white z-10"
                                         style={{ backgroundColor: 'rgba(0,0,0,0.5)' }}
                                     >
-                                        Branding • Web • Growth
+                                        Custom Systems • Web • ICT
                                     </div>
 
-                                    <div className="absolute right-4 bottom-4">
-                                        <button 
-                                            className="inline-flex items-center gap-2 rounded-full px-4 py-2 backdrop-blur-sm hover:bg-white/20 transition focus:outline-none text-white"
-                                            style={{ backgroundColor: 'rgba(0,0,0,0.3)' }}
-                                        >
-                                            <PlayIcon className="size-4" />
-                                            <span className="text-xs">See case study</span>
-                                        </button>
+                                    <button
+                                        type="button"
+                                        onClick={goPrev}
+                                        className="absolute left-3 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full flex items-center justify-center text-white opacity-80 hover:opacity-100 transition-opacity"
+                                        style={{ backgroundColor: 'rgba(0,0,0,0.4)' }}
+                                        aria-label="Previous slide"
+                                    >
+                                        <ChevronLeft className="size-5" />
+                                    </button>
+                                    <button
+                                        type="button"
+                                        onClick={goNext}
+                                        className="absolute right-3 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full flex items-center justify-center text-white opacity-80 hover:opacity-100 transition-opacity"
+                                        style={{ backgroundColor: 'rgba(0,0,0,0.4)' }}
+                                        aria-label="Next slide"
+                                    >
+                                        <ChevronRight className="size-5" />
+                                    </button>
+
+                                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex gap-2">
+                                        {heroSlides.map((_, i) => (
+                                            <button
+                                                key={i}
+                                                type="button"
+                                                onClick={() => goToSlide(i)}
+                                                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                                                    i === currentSlide ? 'w-6 bg-white' : 'bg-white/50 hover:bg-white/80'
+                                                }`}
+                                                aria-label={`Go to slide ${i + 1}`}
+                                            />
+                                        ))}
                                     </div>
                                 </div>
                             </motion.div>
 
                             <div className="mt-4 flex gap-3 items-center justify-start">
-                                {galleryStripImages.map((src, i) => (
-                                    <motion.div
+                                {heroSlides.map((slide, i) => (
+                                    <motion.button
                                         key={i}
+                                        type="button"
+                                        onClick={() => goToSlide(i)}
                                         initial={{ y: 20, opacity: 0 }}
                                         whileInView={{ y: 0, opacity: 1 }}
                                         viewport={{ once: true }}
                                         transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1, delay: 0.1 + i * 0.1 }}
-                                        className="w-14 h-10 rounded-lg overflow-hidden"
-                                        style={{ border: '1px solid var(--border-color)' }}
+                                        className={`w-14 h-10 rounded-lg overflow-hidden flex-shrink-0 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${
+                                            i === currentSlide
+                                                ? 'ring-2 ring-blue-500 scale-110 opacity-100'
+                                                : 'border border-[var(--border-color)] opacity-70 hover:opacity-100 hover:scale-105'
+                                        }`}
+                                        aria-label={`View slide ${i + 1}`}
                                     >
                                         <img
-                                            src={src}
-                                            alt="project-thumbnail"
+                                            src={slide.src}
+                                            alt={slide.alt}
                                             className="w-full h-full object-cover"
                                         />
-                                    </motion.div>
+                                    </motion.button>
                                 ))}
                                 <motion.div 
                                     className="text-sm ml-2 flex items-center gap-2"
@@ -202,7 +265,7 @@ export default function Hero() {
                                         <span className="absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75 animate-ping duration-300" />
                                         <span className="relative inline-flex size-2 rounded-full bg-green-500" />
                                     </div>
-                                    20+ completed projects
+                                    20+ Completed Projects
                                 </motion.div>
                             </div>
                         </motion.div>

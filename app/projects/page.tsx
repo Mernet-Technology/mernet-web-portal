@@ -6,46 +6,28 @@ import { ArrowRightIcon, ExternalLink } from 'lucide-react';
 
 const projects = [
     {
-        title: 'E-Commerce Platform',
-        category: 'Web Development',
-        image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=800',
-        description: 'A modern e-commerce solution with seamless checkout experience and inventory management.',
-        tags: ['Next.js', 'Stripe', 'PostgreSQL']
+        title: 'Inventory Management System',
+        category: 'Business System',
+        image: '/images/services-inventory-management.png',
+        description: 'Real-time stock tracking, supplier management, and sales reporting system.'
     },
     {
-        title: 'Brand Identity System',
-        category: 'Branding',
-        image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=800',
-        description: 'Complete brand overhaul for a tech startup including logo, guidelines, and marketing materials.',
-        tags: ['Logo Design', 'Brand Strategy', 'Visual Identity']
-    },
-    {
-        title: 'Fitness Tracking App',
-        category: 'Mobile App',
-        image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=800',
-        description: 'Cross-platform mobile app for fitness tracking with social features and personalized plans.',
-        tags: ['React Native', 'Firebase', 'HealthKit']
-    },
-    {
-        title: 'SaaS Dashboard',
+        title: 'Church Management System',
         category: 'Web Application',
+        image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=800',
+        description: 'Membership management, contribution tracking, attendance, and reporting platform.'
+    },
+    {
+        title: 'Restaurant Management System',
+        category: 'POS & Operations',
+        image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=800',
+        description: 'Order management, billing, kitchen coordination, and analytics system.'
+    },
+    {
+        title: 'Custom Client Portal',
+        category: 'Enterprise System',
         image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800',
-        description: 'Analytics dashboard for a B2B SaaS platform with real-time data visualization.',
-        tags: ['React', 'D3.js', 'Node.js']
-    },
-    {
-        title: 'Restaurant Website',
-        category: 'Web Design',
-        image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800',
-        description: 'Modern website with online ordering system and reservation management.',
-        tags: ['WordPress', 'WooCommerce', 'Custom Theme']
-    },
-    {
-        title: 'Corporate Rebrand',
-        category: 'Branding',
-        image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800',
-        description: 'Strategic rebrand for a financial services company entering new markets.',
-        tags: ['Brand Strategy', 'Marketing', 'Design System']
+        description: 'Secure web portal designed for streamlined communication and internal management.'
     }
 ];
 
@@ -55,9 +37,9 @@ export default function ProjectsPage() {
             <section className="py-20">
                 <div className="max-w-6xl mx-auto px-4">
                     <SectionTitle
-                        title="Our Work"
-                        heading="Projects we're proud of"
-                        description="Explore our portfolio of successful projects across various industries and technologies."
+                        title="Our Projects"
+                        heading="Business Systems We've Built"
+                        description="A portfolio of reliable systems developed to improve efficiency and operational control."
                     />
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
@@ -91,23 +73,9 @@ export default function ProjectsPage() {
                                         {project.category}
                                     </span>
                                     <h3 className="text-lg font-semibold mt-2 mb-2" style={{ color: 'var(--text-primary)' }}>{project.title}</h3>
-                                    <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--text-secondary)' }}>
+                                    <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
                                         {project.description}
                                     </p>
-                                    <div className="flex flex-wrap gap-2">
-                                        {project.tags.map((tag, j) => (
-                                            <span
-                                                key={j}
-                                                className="text-xs px-2 py-1 rounded-full"
-                                                style={{ 
-                                                    backgroundColor: 'var(--accent-bg)',
-                                                    color: 'var(--text-muted)'
-                                                }}
-                                            >
-                                                {tag}
-                                            </span>
-                                        ))}
-                                    </div>
                                 </div>
                             </motion.div>
                         ))}
@@ -120,10 +88,10 @@ export default function ProjectsPage() {
                         viewport={{ once: true }}
                         transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1, delay: 0.5 }}
                     >
-                        <p className="mb-6" style={{ color: 'var(--text-secondary)' }}>Have a project in mind?</p>
+                        <p className="mb-6" style={{ color: 'var(--text-secondary)' }}>Have a system in mind?</p>
                         <a href="/contact">
                             <GhostButton className="px-8 py-3">
-                                Let's talk <ArrowRightIcon size={18} />
+                                Let's Talk <ArrowRightIcon size={18} />
                             </GhostButton>
                         </a>
                     </motion.div>
