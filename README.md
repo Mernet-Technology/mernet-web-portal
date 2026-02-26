@@ -1,38 +1,93 @@
-# Pixel.io - Digital Agency Website Template
+# Mernet Technologies – Web Portal
 
-#### Preview
+Official website for **Mernet Technologies**, a software development and ICT solutions company based in Mbeya, Tanzania.
 
- - [Demo](https://themewagon.github.io/pixel.io-nextjs/)
+## About the site
 
-## Getting Started
+This portal showcases Mernet’s services, projects, and contact information:
 
-1. Clone Repository
+- **Home** – Hero slideshow, services preview, featured systems, why choose us, and CTA
+- **About** – Company story, values (Client-Focused, Innovation, Excellence, Integrity)
+- **Services** – Custom software development, business management systems, web applications, ICT infrastructure, maintenance & support, ICT consultancy and training
+- **Projects** – Portfolio (e.g. Inventory Management, Church Management, Restaurant Management, Custom Client Portal)
+- **Contact** – Email, phone, location (Mbeya, Tanzania), office hours, and contact form
+
+### Features
+
+- Light and dark theme with persistent preference
+- Responsive layout (mobile, tablet, desktop)
+- Hero section with image slideshow and synced thumbnails
+- Animated CTAs and hover effects
+- Active page indicator in the navigation
+- Footer with company links, legal links, and Instagram connect
+
+## Tech stack
+
+- **Framework:** [Next.js](https://nextjs.org/) (App Router)
+- **Styling:** Tailwind CSS
+- **Animation:** Framer Motion
+- **Icons:** Lucide React
+
+## Getting started
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Mernet-Technology/mernet-web-portal.git
+   cd mernet-web-portal
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+   Other package managers:
+   ```bash
+   yarn dev
+   # or
+   pnpm dev
+   # or
+   bun dev
+   ```
+
+4. **Build for production**
+   ```bash
+   npm run build
+   npm start
+   ```
+
+## Project structure
+
 ```
-git clone https://github.com/Mernet-Technology/mernet-web-portal
-```
-2. Install Dependencies
-```
-npm i
-```
-3. Run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+app/
+├── layout.tsx          # Root layout, metadata, theme
+├── page.tsx            # Home
+├── about/
+├── services/
+├── projects/
+├── contact/
+└── components/
+    ├── layout/         # Navbar, Footer, Container
+    ├── ui/             # Button, SectionTitle, Card, Badge, etc.
+    └── sections/       # Hero, ServicesPreview, FeaturedProjects, WhyChooseUs, CTA
+public/
+├── images/             # Slideshow and project images
+└── logo.svg
 ```
 
-## Author 
-```
-Design and code is completely written by PrebuiltUI and development team. 
-```
+## Contact
 
-## License
+- **Email:** mernettechnology@gmail.com  
+- **Phone:** +255 767 956 613 / +255 743 463 710  
+- **Location:** Mbeya, Tanzania  
+- **Instagram:** [@mernettechnologies_](https://www.instagram.com/mernettechnologies_/)
 
- - Design and Code is Copyright &copy; <a href="https://prebuiltui.com/tailwind-templates?ref=pixel-forge" target="_blank">prebuiltUI</a>
- - Licensed cover under [MIT]
- - Distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
+---
+
+© Mernet Technologies. All rights reserved.
