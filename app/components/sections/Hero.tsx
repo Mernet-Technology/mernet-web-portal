@@ -36,9 +36,9 @@ export default function Hero() {
     };
 
     const trustedUserImages = [
-        'https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=50',
-        'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=50',
-        'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=50&h=50&fit=crop'
+        '/images/trusteduser-1.jpg',
+        '/images/trusteduser-2.jpg',
+        '/images/trusteduser-3.jpg'
     ];
 
     const trustedLogosText = [
