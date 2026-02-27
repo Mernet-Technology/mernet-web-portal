@@ -14,13 +14,13 @@ const projects = [
     {
         title: 'Church Management System',
         category: 'Web Application',
-        image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=800',
+        image: '/images/services-church-management-system.jpg',
         description: 'Membership management, contribution tracking, attendance, and reporting platform.'
     },
     {
         title: 'Restaurant Management System',
         category: 'POS & Operations',
-        image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=800',
+        image: '/images/services-restaurant-system.jpg',
         description: 'Order management, billing, kitchen coordination, and analytics system.'
     },
     {
