@@ -4,6 +4,7 @@ import Footer from "./components/layout/Footer";
 import Navbar from "./components/layout/Navbar";
 import { ThemeProvider } from "./components/ThemeProvider";
 import { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 
 const outfit = Outfit({
     variable: "--font-sans",
@@ -79,6 +80,7 @@ export default function RootLayout({
                     <SoftBackdrop />
                     <Navbar />
                     {children}
+                    <Analytics />
                     <Footer />
                 </ThemeProvider>
             </body>
