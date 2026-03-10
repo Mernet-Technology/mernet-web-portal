@@ -355,7 +355,7 @@ Have a project in mind? Reach out and let’s discuss how we can build the right
 Email: mernettechnology@gmail.com  
 Phone: +255 714 239 271  
 Phone: +255 743 463 710  
-Location: Mbeya, Tanzania  
+Location: Dar-es-Salaam, Tanzania  
 
 Office Hours:
 Monday – Friday: 8:00 AM – 5:00 PM (EAT)
