@@ -3,9 +3,17 @@ import remarkGfm from 'remark-gfm';
 
 interface MarkdownContentProps {
   content: string;
+  /** Base URL for resolving relative image/link paths (e.g. https://yoursite.com). Set in prod so images load. */
+  baseUrl?: string;
 }
 
-export default function MarkdownContent({ content }: MarkdownContentProps) {
+export default function MarkdownContent({ content, baseUrl = '' }: MarkdownContentProps) {
+  const resolveUrl = (url: string | undefined) => {
+    if (!url) return url;
+    if (url.startsWith('http')) return url;
+    return baseUrl ? `${baseUrl.replace(/\/$/, '')}${url.startsWith('/') ? url : `/${url}`}` : url;
+  };
+
   return (
     <ReactMarkdown
       remarkPlugins={[remarkGfm]}
@@ -58,6 +66,14 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
           <strong className="font-semibold" style={{ color: 'var(--text-primary)' }}>
             {children}
           </strong>
+        ),
+        img: ({ src, alt }) => (
+          <img
+            src={resolveUrl(src)}
+            alt={alt ?? ''}
+            className="rounded-xl max-w-full h-auto my-4"
+            style={{ border: '1px solid var(--border-color)' }}
+          />
         ),
       }}
     >

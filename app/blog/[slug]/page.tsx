@@ -102,7 +102,7 @@ export default async function BlogPostPage({ params }: Props) {
           {post.image && (
             <div className="mt-6 rounded-2xl overflow-hidden" style={{ border: '1px solid var(--border-color)' }}>
               <img
-                src={post.image}
+                src={imageUrl ?? post.image}
                 alt=""
                 className="w-full h-auto object-cover"
               />
@@ -110,7 +110,7 @@ export default async function BlogPostPage({ params }: Props) {
           )}
         </header>
         <div className="prose-custom">
-          <MarkdownContent content={post.content} />
+          <MarkdownContent content={post.content} baseUrl={SITE_URL} />
         </div>
       </article>
     </main>

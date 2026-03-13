@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { getAllPosts } from '@/lib/blog';
 import SectionTitle from '../components/ui/SectionTitle';
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || '';
+
 export const metadata: Metadata = {
   title: 'Blog',
   description:
@@ -47,7 +49,7 @@ export default function BlogPage() {
                     {post.image && (
                       <div className="aspect-video bg-gray-200 dark:bg-gray-800">
                         <img
-                          src={post.image}
+                          src={post.image.startsWith('http') ? post.image : `${SITE_URL}${post.image}`}
                           alt=""
                           className="w-full h-full object-cover"
                         />
